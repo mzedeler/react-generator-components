@@ -1,0 +1,8 @@
+{
+  "loader": "ts-node/esm",
+  "extensions": ["ts", "tsx"],
+  "require": [
+      "global-jsdom/register",
+      "mocha.cjs"
+  ]
+}

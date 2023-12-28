@@ -1,0 +1,39 @@
+{
+  "name": "react-generator-components",
+  "version": "0.0.1",
+  "description": "Generator based rendering for React components",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mzedeler/react-generator-components.git"
+  },
+  "keywords": [
+    "react",
+    "generators"
+  ],
+  "author": "Michael Zedeler <michael@zedeler.dk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mzedeler/react-generator-components/issues"
+  },
+  "homepage": "https://github.com/mzedeler/react-generator-components#readme",
+  "devDependencies": {
+    "@testing-library/react": "^14.1.2",
+    "@types/chai": "^4.3.11",
+    "@types/chai-dom": "^1.11.3",
+    "@types/mocha": "^10.0.6",
+    "chai": "^5.0.0",
+    "chai-dom": "^1.12.0",
+    "eslint": "^8.56.0",
+    "global-jsdom": "^9.2.0",
+    "mocha": "^10.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^0.0.1-alpha.0"
+  }
+}

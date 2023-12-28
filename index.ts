@@ -1,1 +1,1 @@
-export { hello } from './hello'
+export { hello } from './hello.js'

@@ -4,5 +4,6 @@
   "require": [
       "global-jsdom/register",
       "mocha.cjs"
-  ]
+  ],
+  "spec": ["**/*.test.tsx", "**/*.test.ts", "*.test.tsx", "*.test.ts"]
 }

@@ -4,7 +4,8 @@
   "description": "Generator based rendering for React components",
   "main": "src/index.ts",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test:watch": "nodemon -e ts,tsx --exec mocha"
   },
   "type": "module",
   "repository": {
@@ -31,6 +32,7 @@
     "eslint": "^8.56.0",
     "global-jsdom": "^9.2.0",
     "mocha": "^10.2.0",
+    "nodemon": "^3.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ts-node": "^10.9.2",

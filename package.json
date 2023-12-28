@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/mzedeler/react-generator-components.git"

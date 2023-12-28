@@ -1,6 +1,9 @@
 import { render, screen } from '@testing-library/react'
 import * as mocha from 'mocha'
-import { expect } from 'chai'
+import { use, expect } from 'chai'
+import chaiDom from 'chai-dom'
+
+use(chaiDom)
 
 console.log('loaded')
 mocha.describe('hello', () => {
@@ -9,8 +12,6 @@ mocha.describe('hello', () => {
 
     render(<MyComponent />)
   
-    console.log('poke')
-    // @ts-expect-error nada
-    expect(screen.queryByRole('heading')).to.exist()
+    expect(screen.queryByRole('heading')).to.exist
   })
 })

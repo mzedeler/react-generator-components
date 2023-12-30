@@ -2,8 +2,9 @@
   "name": "react-generator-components",
   "version": "0.0.1",
   "description": "Generator based rendering for React components",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
+    "develop": "parcel serve src/playground/index.html",
     "test": "mocha",
     "test:watch": "nodemon -e ts,tsx --exec mocha"
   },
@@ -33,6 +34,8 @@
     "global-jsdom": "^9.2.0",
     "mocha": "^10.2.0",
     "nodemon": "^3.0.2",
+    "parcel": "^2.10.3",
+    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ts-node": "^10.9.2",

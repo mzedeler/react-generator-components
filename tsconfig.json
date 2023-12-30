@@ -2,7 +2,7 @@
   // "extends": "ts-node/node16/tsconfig.json",
   "compilerOptions": {
     // "esModuleInterop": true,
-    "lib": ["es2021"],
+    "lib": ["es2021", "DOM"],
     "module": "Node16",
     "target": "es2021",
     // "moduleResolution": "Bundler",

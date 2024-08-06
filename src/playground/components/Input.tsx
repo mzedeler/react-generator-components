@@ -20,4 +20,9 @@ export const Input = gen(async function *inner(props) {
     yield <input onChange={cb} value={value} />
     value = await promise
   }
+  yield (
+    <>
+      <input value={value} /> ← there, you said it
+    </>
+  )
 })

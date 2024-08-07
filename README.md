@@ -1,6 +1,6 @@
-# react-generator-components
+# React generator components
 Generator based rendering for React components: write components as async generators and
-use `yield` with JSX syntaxt to yield other components
+use `yield` with JSX syntaxt to yield other components.
 
 A sample async generator component:
 ```typescript
@@ -44,6 +44,9 @@ npm run develop -- --open
 ## Feature requests, bugs and support
 I am unable to provide free support or maintenance, but I will happily try to merge pull
 requests that are taking this in a direction, I can support (if in doubt, ask first).
+
+## See also
+Inspired by [Crank.js](https://crank.js.org/).
 
 ## Author
 Michael Zedeler <michael@zedeler.dk>

@@ -1,3 +1,5 @@
+import React from 'react'
+import { createGeneratorElement } from '../../createGeneratorElement.js'
 import { gen } from '../../gen.js'
 
 const sleep = (delay: number) => new Promise(r => setTimeout(r, delay))

@@ -1,3 +1,5 @@
+import React from 'react'
+import { createGeneratorElement } from '../../createGeneratorElement.js'
 import { Timer } from './Timer.js'
 import { Input } from './Input.js'
 import { StreamBasedInput } from './StreamBasedInput.js'

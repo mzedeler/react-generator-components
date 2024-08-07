@@ -1,3 +1,8 @@
 import React from 'react'
+import { gen } from './gen.js'
 
-export const createGeneratorElement = (...args) => console.log(...args) || React.createElement(...args)
+const isAsyncGenerator = (value: any) => typeof value === 'function'
+  && value.prototype?.toString() === '[object AsyncGenerator]'
+
+export const createGeneratorElement = (element: any, props: any, ...rest: any[]) =>
+  isAsyncGenerator(element) ? gen(element)(props) : React.createElement(element, props, ...rest)

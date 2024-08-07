@@ -15,7 +15,7 @@ const getSetter = (): [ChangeEventHandler<HTMLInputElement>, Promise<string>] =>
   return [callback, promise]
 }
 
-export const Input = gen(async function *inner(props) {
+export const Input = async function *inner() {
   let value = ''
   while (value !== 'hello') {
     const [cb, promise] = getSetter()
@@ -27,4 +27,4 @@ export const Input = gen(async function *inner(props) {
       <input value={value} /> ← there, you said it
     </>
   )
-})
+}

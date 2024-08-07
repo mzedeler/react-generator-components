@@ -9,17 +9,16 @@ export const Playground = () => (
     <h1>This should work</h1>
     <details>
       <summary>A timer</summary>
-      <Timer />
+      {/* <Timer /> */}
       <p>This is just a basic timer (note that it keeps running even when hidden).</p>
     </details>
     <details>
       <summary>An input</summary>
-      <Input />
       <p>Try typing "hello". (There is no way to reset except by reloading.)</p>
     </details>
     <details>
       <summary>A stream based input</summary>
-      <StreamBasedInput />
+      {/* <StreamBasedInput /> */}
       <p>This input stays enabled until it contains "hello" like the other one, but
         it uses a stream internally (try looking at the source).</p>
     </details>

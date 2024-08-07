@@ -20,7 +20,7 @@ export const Timer = async function *inner() {
 
 How it is used:
 
-```javascript
+```typescript
 import React from 'react'
 import { createGeneratorElement } from '../../createGeneratorElement.js'
 
@@ -31,6 +31,41 @@ export MyApp = () => (
   </>
 )
 ```
+
+## Utilities
+Much like other toolkits using streams, it is possible to use streams in conjuction with
+this toolkit, as long as they have an async iterator interface. As an alternative to
+`useState`, I've written a `genState` "hook" that can returns a stream of data that you
+can await:
+
+```typescript
+import React from 'react'
+import { createGeneratorElement } from '../../createGeneratorElement.js'
+import { ChangeEventHandler } from 'react'
+import { genState } from '../../genState.js'
+
+export const StreamBasedInput = async function *inner() {
+  let [value$, setValue] = genState('')
+
+  const handleChange: ChangeEventHandler<HTMLInputElement> =
+    e => setValue(e.target.value)
+
+  for await (const value of value$) {
+    yield <input onChange={handleChange} value={value} />
+    if (value === 'hello') {
+      break
+    }
+  }
+
+  yield <input value="hello" disabled />
+}
+```
+
+Because it is just a plain stream, `genState` doesn't magically have to hook into any React
+internals or anything else in order to work. This means that you can use your own async
+streams to keep components updated without the magic of rerenders or hooks, React provides.
+
+## Disclaimer
 
 Note that this is just a proof of concept for how you can create CrankJS like components that
 coexist with React. Please poke me if you want to use it for anything serious.

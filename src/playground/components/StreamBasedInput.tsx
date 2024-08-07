@@ -1,7 +1,6 @@
 import React from 'react'
 import { createGeneratorElement } from '../../createGeneratorElement.js'
 import { ChangeEventHandler } from 'react'
-import { gen } from '../../gen.js'
 import { genState } from '../../genState.js'
 
 export const StreamBasedInput = async function *inner() {

@@ -9,7 +9,7 @@ export const Playground = () => (
     <h1>This should work</h1>
     <details>
       <summary>A timer</summary>
-      {/* <Timer /> */}
+      <Timer />
       <p>This is just a basic timer (note that it keeps running even when hidden).</p>
     </details>
     <details>

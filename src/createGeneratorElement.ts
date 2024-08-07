@@ -5,4 +5,6 @@ const isAsyncGenerator = (value: any) => typeof value === 'function'
   && value.prototype?.toString() === '[object AsyncGenerator]'
 
 export const createGeneratorElement = (element: any, props: any, ...rest: any[]) =>
-  isAsyncGenerator(element) ? gen(element)(props) : React.createElement(element, props, ...rest)
+  isAsyncGenerator(element)
+  ? console.log(element) || React.createElement(gen(element), props)
+  : React.createElement(element, props, ...rest)

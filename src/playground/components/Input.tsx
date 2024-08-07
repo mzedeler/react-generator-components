@@ -15,11 +15,11 @@ const getSetter = (): [ChangeEventHandler<HTMLInputElement>, Promise<string>] =>
   return [callback, promise]
 }
 
-export const Input = async function *inner() {
+export const Input = async function *inner({ placeholder }: { placeholder: string }) {
   let value = ''
   while (value !== 'hello') {
     const [cb, promise] = getSetter()
-    yield <input onChange={cb} value={value} />
+    yield <input onChange={cb} value={value} placeholder={placeholder} />
     value = await promise
   }
   yield (

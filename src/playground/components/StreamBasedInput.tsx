@@ -11,8 +11,7 @@ export const StreamBasedInput = async function *inner() {
     e => setValue(e.target.value)
 
   for await (const value of value$) {
-    console.log({ value })
-    yield <input  value={value} />
+    yield <input onChange={handleChange} value={value} />
     if (value === 'hello') {
       break
     }

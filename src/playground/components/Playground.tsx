@@ -14,11 +14,12 @@ export const Playground = () => (
     </details>
     <details>
       <summary>An input</summary>
+      <Input placeholder="...type something..."/>
       <p>Try typing "hello". (There is no way to reset except by reloading.)</p>
     </details>
     <details>
       <summary>A stream based input</summary>
-      {/* <StreamBasedInput /> */}
+      <StreamBasedInput />
       <p>This input stays enabled until it contains "hello" like the other one, but
         it uses a stream internally (try looking at the source).</p>
     </details>
